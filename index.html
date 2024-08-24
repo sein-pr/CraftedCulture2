@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Crafted Culture</title>
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo.png" alt="logo-img">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <i class="fa-solid fa-shopping-bag" style="color: #000000;"></i>
+            <span>$0.00</span>
+        </div>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="assets/data/b-588_2048x2048.jpg" alt="old villages">
+                    <img src="assets/data/bangles_2048x2048.jpg" alt="bangles">
+                    <img src="assets/data/beauty-is-in-the-eye-of-the-beholder_2048x2048.jpg" alt="beauty">
+                    <img src="assets/data/before-the-kiss_2048x2048.jpg" alt="">
+                </div>
+                <div class="carousel-controls">
+                    <button class="prev" onclick="showPrevImage()">&#10094;</button>
+                    <button class="next" onclick="showNextImage()">&#10095;</button>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="indicator" onclick="setCurrentImage(0)"></span>
+                    <span class="indicator" onclick="setCurrentImage(1)"></span>
+                    <span class="indicator" onclick="setCurrentImage(2)"></span>
+                    <span class="indicator" onclick="setCurrentImage(3)"></span>
+                </div>
+            </div>
+            <div class="banner-text">
+                <h2>Crafted Culture</h2>
+                <h1>Africa To The World</h1>
+                <p>Bringing African Creativity to the World, One Masterpiece at a Time</p>
+                <button id="shopNow"><i class="fa-brands fa-shopify shop-icon"></i>Shop Now</button>
+            </div>
+        </section>
+    </main>
+    <script src="./scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/b9eb99af91.js" crossorigin="anonymous"></script>
+</body>
+</html>
