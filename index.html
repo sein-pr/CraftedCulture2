@@ -8,9 +8,13 @@
 </head>
 <body>
     <header>
-        <img src="assets/img/logo.png" alt="logo-img">
-        <nav>
-            <ul>
+        <img src="assets/img/logo.png" alt="logo-img" class="logo large">
+        <img src="assets/img/logo-short.png" alt="logo-img" class=" logo short">
+        <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="#">Pages</a></li>
@@ -19,8 +23,8 @@
             </ul>
         </nav>
         <div class="cart">
-            <i class="fa-solid fa-shopping-bag" style="color: #000000;"></i>
-            <span>$0.00</span>
+            <a href="#cart"><i class="fa-solid fa-shopping-bag"></i></a>
+            <span>0.00</span>
         </div>
     </header>
     <main>
@@ -48,6 +52,14 @@
                 <h1>Africa To The World</h1>
                 <p>Bringing African Creativity to the World, One Masterpiece at a Time</p>
                 <button id="shopNow"><i class="fa-brands fa-shopify shop-icon"></i>Shop Now</button>
+                <div class="socials">
+                    <ul>
+                        <li><a href="#linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#x"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
