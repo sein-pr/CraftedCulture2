@@ -19,41 +19,44 @@ header {
     border-bottom: 1px solid #eaeaea;
 }
 
-header > img {
+header>img {
     height: 3.05em;
     animation: myAnim 4s ease 0s infinite normal forwards;
 }
+
 @keyframes myAnim {
-	0%,
-	100% {
-		transform: translateY(0) rotate(0);
-		transform-origin: 50% 50%;
-	}
 
-	15% {
-		transform: translateY(-30px) rotate(-6deg);
-	}
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+        transform-origin: 50% 50%;
+    }
 
-	30% {
-		transform: translateY(15px) rotate(6deg);
-	}
+    15% {
+        transform: translateY(-30px) rotate(-6deg);
+    }
 
-	45% {
-		transform: translateY(-15px) rotate(-3.6deg);
-	}
+    30% {
+        transform: translateY(15px) rotate(6deg);
+    }
 
-	60% {
-		transform: translateY(9px) rotate(2.4deg);
-	}
+    45% {
+        transform: translateY(-15px) rotate(-3.6deg);
+    }
 
-	75% {
-		transform: translateY(-6px) rotate(-1.2deg);
-	}
+    60% {
+        transform: translateY(9px) rotate(2.4deg);
+    }
+
+    75% {
+        transform: translateY(-6px) rotate(-1.2deg);
+    }
 }
 
-.logo{
+.logo {
     display: none;
 }
+
 .navbar {
     display: flex;
     align-items: center;
@@ -85,22 +88,24 @@ header > img {
     font-size: 20px;
 
 }
-.cart span{
+
+.cart span {
     color: #e74c3c;
 }
-.cart span::before{
+
+.cart span::before {
     content: "$";
 }
 
-.cart a i{
+.cart a i {
     color: #333;
 }
 
-.cart a i:hover{
+.cart a i:hover {
     color: #e74c3c;
 }
 
-.banner {
+.hero {
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -109,8 +114,8 @@ header > img {
 .carousel {
     position: relative;
     width: 100%;
-    height: 600px; 
-    overflow: hidden; 
+    height: 600px;
+    overflow: hidden;
 }
 
 .carousel-images {
@@ -121,9 +126,9 @@ header > img {
 
 
 .carousel-images img {
-    min-width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .carousel-controls {
@@ -135,7 +140,8 @@ header > img {
     transform: translateY(-50%);
 }
 
-.prev, .next {
+.prev,
+.next {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -165,37 +171,38 @@ header > img {
     background-color: #ff5733;
 }
 
-.banner-text {
+.hero-text {
     position: absolute;
     top: 50%;
-    left: 25%; 
+    left: 25%;
     transform: translate(-50%, -50%);
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.banner-text h2 {
+.hero-text h2 {
     font-size: 18px;
     animation: h2-name 4s ease 0s 1 normal forwards;
 }
-@keyframes h2-name {
-	0% {
-		transform: scale(2);
-		transform-origin: 50% 100%;
-	}
 
-	100% {
-		transform: scale(1);
-		transform-origin: 50% 100%;
-	}
+@keyframes h2-name {
+    0% {
+        transform: scale(2);
+        transform-origin: 50% 100%;
+    }
+
+    100% {
+        transform: scale(1);
+        transform-origin: 50% 100%;
+    }
 }
 
-.banner-text h1 {
+.hero-text h1 {
     font-size: 48px;
     margin: 20px 0;
 }
 
-.banner-text p {
+.hero-text p {
     font-size: 16px;
     margin-bottom: 30px;
 }
@@ -210,7 +217,7 @@ button {
     cursor: pointer;
 }
 
-.shop-icon{
+.shop-icon {
     margin-right: 10px;
 }
 
@@ -219,67 +226,173 @@ button:hover {
     color: #e74c3c;
 }
 
-.socials{
-    margin-left: 148px; 
+.socials {
+    margin-left: 148px;
     margin-top: 15px;
-    
+
 }
 
-.socials ul li i{
+.socials ul li i {
     color: #f9f9f9;
     font-size: 20px;
-    
+
 }
-.socials ul{
+
+.socials ul {
     list-style-type: none;
     display: flex;
     gap: 35px;
 }
-.socials ul li i:hover{
+
+.socials ul li i:hover {
     color: #e74c3c;
-    -webkit-box-shadow: 0px 0px 10px 1px rgba(60,185,230,1);
-    -moz-box-shadow: 0px 0px 10px 1px rgba(60,185,230,1);
-    box-shadow: 0px 0px 10px 1px rgba(60,185,230,1);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(60, 185, 230, 1);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(60, 185, 230, 1);
+    box-shadow: 0px 0px 10px 1px rgba(60, 185, 230, 1);
 }
 
-.menu-icon:hover{
+.menu-icon:hover {
     color: #e74c3c;
 }
 
-.nav-links li a:hover{
+.nav-links li a:hover {
     color: #e74c3c;
 }
+
 /* Hero design ends here */
+
+
+/* trending styling */
+
+.trending {
+    top: 50px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    margin: 10px;
+}
+
+
+.btn span {
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for background and text color */
+}
+
+.btn span.active {
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-section {
+    margin-top: 25px;
+}
+
+.item-container {
+    background: rgba(255, 255, 255, 0.3);
+    width: 335px;
+    position: relative;
+    margin: 10px;
+}
+
+.item-container img {
+    border-radius: 3px;
+    margin-top: 2px;
+    height: 250px;
+    width: 100%;
+    /* Use 100% to make it responsive */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the area */
+}
+
+.item-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 5px;
+    display: none;
+    flex-direction: column;
+}
+
+.item-icons ul {
+    padding: 0;
+    margin: 0;
+}
+
+.item-icons ul li {
+    list-style-type: none;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.item-icons ul li i {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #00afed;
+}
+
+.item-icons ul li i:hover {
+    color: #e74c3c;
+    /* Hover color */
+}
+
+.item-container p {
+    text-align: start;
+    /* Align text to the start */
+    margin-left: 3px;
+    /* Left margin */
+}
+
+.item-container .item-name {
+    font-size: 13px;
+    /* Item name font size */
+    font-weight: 400;
+    /* Item name font weight */
+}
+
+.item-container .item-rating::before {
+    content: "⭐⭐⭐⭐⭐";
+    /* Placeholder for rating */
+}
+
+.item-container .item-price {
+    font-size: 16px;
+    /* Price font size */
+    font-weight: 600;
+    /* Price font weight */
+}
+
+/* Optional: Show icons on hover */
+.item-container:hover .item-icons {
+    display: flex;
+}
+
+
+.btn-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 6%;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Hero responsive starts here */
 
-/* Display large logo for large screens */
-@media (min-width: 768px) {
-    .logo.large {
-        display: block;
-    }
 
-    .logo.short {
-        display: none;
-    }
-
-    /* Navbar display for large screens */
-    .navbar {
-        display: flex;
-        align-items: center;
-    }
-
-    .menu-icon {
-        display: none;
-    }
-
-    .nav-links {
-        display: flex;
-    }
-}
-
-/* Display small logo and responsive navbar for small screens */
-@media (max-width: 767.98px) {
+/* For small screens (mobile devices) */
+@media only screen and (max-width: 600px) {
     .logo.short {
         display: block;
     }
@@ -305,35 +418,40 @@ button:hover {
         background: none;
         border: none;
         color: #333;
-        z-index: 10; /* Ensures the menu icon is on top */
+        z-index: 10;
+        /* Ensures the menu icon is on top */
     }
 
-    
+
     .cart {
         display: flex;
         justify-content: center;
         /* text-align: center; */
         width: 100%;
-        margin-right:30% ;
+        margin-right: 30%;
         margin-top: 20px;
-        position: relative; /* Ensure it remains centered */
+        position: relative;
+        /* Ensure it remains centered */
     }
 
-    .cart a{
-        margin-right:10px ;
+    .cart a {
+        margin-right: 10px;
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Adjust based on header height */
+        top: 70px;
+        /* Adjust based on header height */
         right: 20px;
-        background-color: rgba(255, 255, 255, 0.9); /* Translucent background */
+        background-color: rgba(255, 255, 255, 0.9);
+        /* Translucent background */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         width: 200px;
-        z-index: 1000; /* Ensures the menu appears on top */
+        z-index: 1000;
+        /* Ensures the menu appears on top */
     }
 
     .nav-links.active {
@@ -349,7 +467,7 @@ button:hover {
         display: block;
     }
 
-    
+
 
     .carousel-indicators {
         position: absolute;
@@ -358,30 +476,32 @@ button:hover {
         transform: translateX(-50%);
         display: flex;
     }
-    .banner-text {
+
+    .hero-text {
         position: absolute;
         top: 50%;
-        left: 50%; 
+        left: 50%;
         transform: translate(-50%, -50%);
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
-    .banner-text h2 {
+
+    .hero-text h2 {
         font-size: 25px;
         color: aqua;
     }
-    
-    .banner-text h1 {
+
+    .hero-text h1 {
         font-size: 38px;
         margin: 20px 0;
     }
-    
-    .banner-text p {
+
+    .hero-text p {
         font-size: 16px;
         margin-bottom: 30px;
         font-weight: 500;
     }
-    
+
     button {
         padding: 15px 30px;
         font-size: 16px;
@@ -391,31 +511,435 @@ button:hover {
         border-radius: 5px;
         cursor: pointer;
     }
-    
-    .shop-icon{
+
+    .shop-icon {
         margin-right: 10px;
     }
-    
+
     button:hover {
         background-color: #f9f9f9;
         color: #e74c3c;
     }
-    
-    .socials{
-        margin-left: 23%; 
+
+    .socials {
+        margin-left: 14%;
         margin-top: 15px;
-        
+
     }
-    
-    .socials ul li i{
+
+    .socials ul li i {
         color: #f9f9f9;
         font-size: 20px;
-        
+
     }
-    .socials ul{
+
+    .socials ul {
         list-style-type: none;
         display: flex;
         gap: 35px;
     }
 
+    /* trending styling */
+
+    .trending {
+        top: 50px;
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        margin: 10px;
+    }
+
+
+    .btn span {
+        cursor: pointer;
+        padding: 10px 20px;
+        transition: background-color 0.3s, color 0.3s;
+        /* Smooth transition for background and text color */
+    }
+
+    .btn span.active {
+        background-color: #e74c3c;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .btn-section {
+        margin-top: 25px;
+    }
+
+    .item-container {
+        background: rgba(255, 255, 255, 0.3);
+        width: 210px;
+        position: relative;
+        margin: 10px;
+    }
+
+    .item-container img {
+        border-radius: 3px;
+        margin-top: 2px;
+        height: 250px;
+        width: 100%;
+        /* Use 100% to make it responsive */
+        object-fit: cover;
+        /* Maintain aspect ratio and cover the area */
+    }
+
+    .item-icons {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+        padding: 5px;
+        display: none;
+        flex-direction: column;
+    }
+
+    .item-icons ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .item-icons ul li {
+        list-style-type: none;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .item-icons ul li i {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #00afed;
+    }
+
+    .item-icons ul li i:hover {
+        color: #e74c3c;
+        /* Hover color */
+    }
+
+    .item-container p {
+        text-align: start;
+        /* Align text to the start */
+        margin-left: 3px;
+        /* Left margin */
+    }
+
+    .item-container .item-name {
+        font-size: 13px;
+        /* Item name font size */
+        font-weight: 400;
+        /* Item name font weight */
+    }
+
+    .item-container .item-rating::before {
+        content: "⭐⭐⭐⭐⭐";
+        /* Placeholder for rating */
+    }
+
+    .item-container .item-price {
+        font-size: 16px;
+        /* Price font size */
+        font-weight: 600;
+        /* Price font weight */
+    }
+
+    /* Optional: Show icons on hover */
+    .item-container:hover .item-icons {
+        display: flex;
+    }
+
+
+    .btn-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 3%;
+    }
+
+}
+
+/* For medium screens (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .logo.short {
+        display: block;
+    }
+
+    .logo.large {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: #333;
+        z-index: 10;
+        /* Ensures the menu icon is on top */
+    }
+
+
+    .cart {
+        display: flex;
+        justify-content: center;
+        /* text-align: center; */
+        width: 100%;
+        margin-right: 30%;
+        margin-top: 20px;
+        position: relative;
+        /* Ensure it remains centered */
+    }
+
+    .cart a {
+        margin-right: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        /* Adjust based on header height */
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        /* Translucent background */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 200px;
+        z-index: 1000;
+        /* Ensures the menu appears on top */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links li a {
+        padding: 10px 20px;
+        display: block;
+    }
+
+
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-text h2 {
+        font-size: 25px;
+        color: aqua;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+        margin: 20px 0;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        margin-bottom: 30px;
+        font-weight: 500;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #ff5733;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .shop-icon {
+        margin-right: 10px;
+    }
+
+    button:hover {
+        background-color: #f9f9f9;
+        color: #e74c3c;
+    }
+
+    .socials {
+        margin-left: 31%;
+        margin-top: 15px;
+
+    }
+
+    .socials ul li i {
+        color: #f9f9f9;
+        font-size: 20px;
+
+    }
+
+    .socials ul {
+        list-style-type: none;
+        display: flex;
+        gap: 35px;
+    }
+
+    /* trending styling */
+
+    .trending {
+        top: 50px;
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        margin: 10px;
+    }
+
+
+    .btn span {
+        cursor: pointer;
+        padding: 10px 20px;
+        transition: background-color 0.3s, color 0.3s;
+        /* Smooth transition for background and text color */
+    }
+
+    .btn span.active {
+        background-color: #e74c3c;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .btn-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 26px  auto;
+    }
+
+    .item-container {
+        background: rgba(255, 255, 255, 0.3);
+        width: 300px;
+        position: relative;
+        margin: 10px;
+    }
+
+    .item-container img {
+        border-radius: 3px;
+        margin-top: 2px;
+        height: 250px;
+        width: 100%;
+        /* Use 100% to make it responsive */
+        object-fit: cover;
+        /* Maintain aspect ratio and cover the area */
+    }
+
+    .item-icons {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+        padding: 5px;
+        display: none;
+        flex-direction: column;
+    }
+
+    .item-icons ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .item-icons ul li {
+        list-style-type: none;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .item-icons ul li i {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #00afed;
+    }
+
+    .item-icons ul li i:hover {
+        color: #e74c3c;
+        /* Hover color */
+    }
+
+    .item-container p {
+        text-align: start;
+        /* Align text to the start */
+        margin-left: 3px;
+        /* Left margin */
+    }
+
+    .item-container .item-name {
+        font-size: 13px;
+        /* Item name font size */
+        font-weight: 400;
+        /* Item name font weight */
+    }
+
+    .item-container .item-rating::before {
+        content: "⭐⭐⭐⭐⭐";
+        /* Placeholder for rating */
+    }
+
+    .item-container .item-price {
+        font-size: 16px;
+        /* Price font size */
+        font-weight: 600;
+        /* Price font weight */
+    }
+
+    /* Optional: Show icons on hover */
+    .item-container:hover .item-icons {
+        display: flex;
+    }
+
+
+}
+
+/* For large screens (desktops and laptops) */
+@media only screen and (min-width: 1025px) {
+    .logo.large {
+        display: block;
+    }
+
+    .logo.short {
+        display: none;
+    }
+
+    /* Navbar display for large screens */
+    .navbar {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+    }
 }

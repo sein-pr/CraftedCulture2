@@ -56,7 +56,14 @@ document.addEventListener('click', handleClickOutside);
 
 // Show nav links on hover
 menuIcon.addEventListener('mouseover', function() {
-    if (window.innerWidth <= 767.98) {
+    if (window.innerWidth <= 600) {
+        navLinks.style.display = 'flex';
+        navLinks.style.opacity = '1';
+    }
+});
+
+menuIcon.addEventListener('mouseover', function() {
+    if (window.innerWidth <= 1024) {
         navLinks.style.display = 'flex';
         navLinks.style.opacity = '1';
     }
@@ -69,13 +76,20 @@ navLinks.addEventListener('mouseleave', function() {
         navLinks.style.opacity = '0';
     }
 });
+navLinks.addEventListener('mouseleave', function() {
+    if (window.innerWidth <= 1024) {
+        navLinks.style.display = 'none';
+        navLinks.style.opacity = '0';
+    }
+});
 
 // Ensure nav links are visible on large screens
 window.addEventListener('resize', function() {
-    if (window.innerWidth > 767.98) {
+    if (window.innerWidth > 1024) {
         navLinks.style.display = 'flex';
         navLinks.style.opacity = '1';
     } else {
         navLinks.style.display = 'none'; // Hide on small screens
     }
 });
+
