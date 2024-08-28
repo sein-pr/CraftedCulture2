@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="/assets/img/favicon.ico" type="icon">
     <title>Crafted Culture</title>
 </head>
+
 <body>
     <header>
         <img src="assets/img/logo.png" alt="logo-img" class="logo large">
@@ -21,9 +25,17 @@
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contacts</a></li>
             </ul>
+            <form action="#" class="search-bar">
+                <input type="text" class="input-box" placeholder="Search for fav art..">
+                <input type="submit" value="Search" class="search-btn">
+            </form>
+            <div class="user">
+                <img src="/assets/img/logo-short.png" alt="profile-pic">
+                <p>Victoria Kulula</p>
+            </div>
         </nav>
         <div class="cart">
-            <a href="#cart"><i class="fa-solid fa-shopping-bag"></i></a>
+            <a href="#cart"><i <i class="uil uil-shopping-bag"></i></a>
             <span>0.00</span>
         </div>
     </header>
@@ -51,7 +63,11 @@
                 <h2>Crafted Culture</h2>
                 <h1>Africa To The World</h1>
                 <p>Bringing African Creativity to the World, One Masterpiece at a Time</p>
-                <button id="shopNow"><i class="fa-brands fa-shopify shop-icon"></i>Shop Now</button>
+                
+                <div class="hero-btn">
+                    <button id="shopNow"><i class="fa-brands fa-shopify"></i>Shop Now</button>
+                    <button id="create-account"><i class="fa-solid fa-user-plus"></i>Create Account</button>
+                </div>
                 <div class="socials">
                     <ul>
                         <li><a href="#linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
@@ -64,99 +80,31 @@
         </section>
         <section class="trending">
             <div class="btn">
-                <span class="active">Best Sellers</span>
-                <span>New Arrivals</span>
-                <span>Hot Sales</span>
+                <span class="active" onclick="showSection('best-sellers')">Best Sellers</span>
+                <span onclick="showSection('new-arrivals')">New Arrivals</span>
+                <span onclick="showSection('hot-sales')">Hot Sales</span>
             </div>
-            <div class="btn-section">
-                <div class="item-container">
-                    <img src="/assets/data/green-adventure_300x300.jpg" alt="item">
-                    <div class="item-icons">
-                        <ul>
-                            <li><i class="fa-solid fa-bag-shopping"></i></li>
-                            <li><i class="fa-solid fa-heart"></i></li>
-                            <li><i class="fa-solid fa-eye"></i></li>
-                        </ul>
-                    </div>
-                    <p class="item-name">Green Adventure</p>
-                    <p class="item-rating"></p>
-                    <p class="item-price">$10.00</p>
-
-                </div>
-                <div class="item-container">
-                    <img src="/assets/data/cow_e3860c30-3b1a-40b7-959e-6cd5bfe580c3_300x300.jpg" alt="item">
-                    <div class="item-icons">
-                        <ul>
-                            <li><i class="fa-solid fa-bag-shopping"></i></li>
-                            <li><i class="fa-solid fa-heart"></i></li>
-                            <li><i class="fa-solid fa-eye"></i></li>
-                        </ul>
-                    </div>
-                    <p class="item-name">Cow</p>
-                    <p class="item-rating"></p>
-                    <p class="item-price">$10.00</p>
-                    
-                </div>
-                <div class="item-container">
-                    <img src="/assets/data/bangles_2048x2048.jpg" alt="item">
-                    <div class="item-icons">
-                        <ul>
-                            <li><i class="fa-solid fa-bag-shopping"></i></li>
-                            <li><i class="fa-solid fa-heart"></i></li>
-                            <li><i class="fa-solid fa-eye"></i></li>
-                        </ul>
-                    </div>
-                    <p class="item-name">Cow</p>
-                    <p class="item-rating"></p>
-                    <p class="item-price">$10.00</p>
-                    
-                </div>
-                <div class="item-container">
-                    <img src="/assets/data/blessing-the-baby_300x300.jpg" alt="item">
-                    <div class="item-icons">
-                        <ul>
-                            <li><i class="fa-solid fa-bag-shopping"></i></li>
-                            <li><i class="fa-solid fa-heart"></i></li>
-                            <li><i class="fa-solid fa-eye"></i></li>
-                        </ul>
-                    </div>
-                    <p class="item-name">Blessing the baby</p>
-                    <p class="item-rating"></p>
-                    <p class="item-price">$10.00</p>
-                    
-                </div>
-                <div class="item-container">
-                    <img src="/assets/data/butterfleyes_300x300.jpg" alt="item">
-                    <div class="item-icons">
-                        <ul>
-                            <li><i class="fa-solid fa-bag-shopping"></i></li>
-                            <li><i class="fa-solid fa-heart"></i></li>
-                            <li><i class="fa-solid fa-eye"></i></li>
-                        </ul>
-                    </div>
-                    <p class="item-name">Blessing the baby</p>
-                    <p class="item-rating"></p>
-                    <p class="item-price">$10.00</p>
-                    
-                </div>
-                <div class="item-container">
-                    <img src="/assets/data/grey_2048x2048.jpg" alt="item">
-                    <div class="item-icons">
-                        <ul>
-                            <li><i class="fa-solid fa-bag-shopping"></i></li>
-                            <li><i class="fa-solid fa-heart"></i></li>
-                            <li><i class="fa-solid fa-eye"></i></li>
-                        </ul>
-                    </div>
-                    <p class="item-name">Blessing the baby</p>
-                    <p class="item-rating"></p>
-                    <p class="item-price">$10.00</p>
-                    
-                </div>
+            <div class="btn-section" id="content-section">
+                <!-- Content will be injected here -->
             </div>
         </section>
+        
     </main>
+
+    <!-- --------------- FOOTER --------------- -->
+    <footer>
+        <div class="footer-social-icons">
+            <div class="icon"><i class="uil uil-instagram"></i></div>
+            <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+            <div class="icon"><i class="uil uil-dribbble"></i></div>
+            <div class="icon"><i class="uil uil-github-alt"></i></div>
+        </div>
+        <div class="bottom-footer">
+            <p>&copy; 2024 Crafted Culture - SEIN INDUSTRIES - All rights reserved.</p>
+        </div>
+    </footer>
     <script src="./scripts/script.js"></script>
     <script src="https://kit.fontawesome.com/b9eb99af91.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

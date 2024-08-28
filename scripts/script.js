@@ -93,3 +93,103 @@ window.addEventListener('resize', function() {
     }
 });
 
+const contentData = {
+    'best-sellers': [
+        {
+            imgSrc: '/assets/data/green-adventure_300x300.jpg',
+            name: 'Green Adventure',
+            price: '$10.00'
+        },
+        {
+            imgSrc: '/assets/data/cow_e3860c30-3b1a-40b7-959e-6cd5bfe580c3_300x300.jpg',
+            name: 'Cow',
+            price: '$25.00'
+        },
+        {
+            imgSrc: '/assets/data/bangles_2048x2048.jpg',
+            name: 'Bangles',
+            price: '$110.00'
+        },
+        
+    ],
+    'new-arrivals': [
+        {
+            imgSrc: '/assets/data/deep-in-thought_2048x2048.jpg',
+            name: 'Deep In Thoughts',
+            price: '$150.00'
+        },
+        {
+            imgSrc: '/assets/data/grey_2048x2048.jpg',
+            name: 'Grey',
+            price: '$20.00'
+        },
+        // Add more items as needed
+    ],
+    'hot-sales': [
+        {
+            imgSrc: '/assets/data/circle-rhythm_300x300.jpg',
+            name: 'Circle Rhythm',
+            price: '$5.00'
+        },
+        {
+            imgSrc: '/assets/data/Color your life (1).png',
+            name: 'Color Your Life',
+            price: '$7.00'
+        },
+        // Add more items as needed
+    ]
+};
+
+function showSection(sectionId) {
+    // Remove 'active' class from all buttons
+    document.querySelectorAll('.btn span').forEach(function(btn) {
+        btn.classList.remove('active');
+    });
+
+    // Add 'active' class to the clicked button
+    document.querySelector('.btn span[onclick="showSection(\'' + sectionId + '\')"]').classList.add('active');
+
+    // Get the content for the selected section
+    const items = contentData[sectionId];
+
+    // Clear existing content
+    const contentSection = document.getElementById('content-section');
+    contentSection.innerHTML = '';
+
+    // Populate content dynamically
+    items.forEach(function(item) {
+        const itemContainer = document.createElement('div');
+        itemContainer.className = 'item-container visible';
+
+        // Check if the section is "New Arrivals" to add the badge
+        const newBadge = sectionId === 'new-arrivals' ? '<div class="new-badge">New</div>' : '';
+
+        itemContainer.innerHTML = `
+            ${newBadge}
+            <img src="${item.imgSrc}" alt="item">
+            <div class="item-icons">
+                <ul>
+                    <li><i class="uil uil-shopping-bag"></i></li>
+                    <li><i class="uil uil-heart"></i></li>
+                    <li><i class="uil uil-eye"></i></li>
+                </ul>
+            </div>
+            <p class="item-name">${item.name}</p>
+            <p class="item-rating"></p>
+            <p class="item-price">${item.price}</p>
+        `;
+
+        // Add the fade-in effect after a slight delay
+        setTimeout(function() {
+            itemContainer.classList.add('fade-in');
+        }, 100);
+
+        contentSection.appendChild(itemContainer);
+    });
+}
+
+
+// Initially show Best Sellers section
+showSection('best-sellers');
+
+
