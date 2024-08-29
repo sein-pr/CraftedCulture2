@@ -10,8 +10,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
     color: #333;
-    margin-left: 25px;
-    margin-right: 25px;
+    
 
 }
 
@@ -62,22 +61,24 @@ header>img {
 .logo {
     display: none;
 }
-.user{
-    margin-left: 100px;
+
+.user {
+    margin-left: 10px;
     display: flex;
     margin-top: 9px;
 }
 
-.user p{
+.user p {
     font-size: 16px;
     margin-top: 10px;
 }
-.user img{
+
+.user img {
     width: 50px;
     border: 2px solid #e74c3c;
     border-radius: 50px;
     height: 50px;
-    margin-right:10px ;
+    margin-right: 10px;
 
 }
 
@@ -109,29 +110,77 @@ header>img {
 }
 
 
-.cart {
-    font-size: 20px;
-
+/* Floating Cart Icon */
+.floating-cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
 }
 
-.cart span {
-    color: #e74c3c;
-    font-size: 16px;
-    padding-top: 10px;
+.floating-cart .uil-shopping-bag {
+    font-size: 24px;
 }
 
-.cart span::before {
-    content: "$";
+.floating-cart .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #00afed;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
 }
 
-.cart i {
+/* Cart Modal */
+.cart-modal {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1001;
+}
+
+.cart-modal .modal-content {
+    padding: 20px;
+}
+
+.cart-modal h2 {
+    margin-top: 0;
+    font-size: 18px;
     color: #333;
-    font-size: 30px;
-
 }
 
-.cart a i:hover {
-    color: #e74c3c;
+.cart-modal p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.cart-modal button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-modal button:hover {
+    background-color: #00afed;
 }
 
 .hero {
@@ -148,6 +197,10 @@ header>img {
     height: 35px;
     margin-left: 16px;
 
+}
+
+.active-link a {
+    color: #e74c3c;
 }
 
 .search-bar .input-box {
@@ -248,7 +301,7 @@ header>img {
 .hero-text {
     position: absolute;
     top: 50%;
-    left: 25%;
+    /* left: 50%; */
     transform: translate(-50%, -50%);
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -291,7 +344,7 @@ button {
     cursor: pointer;
 }
 
-.hero-btn button i{
+.hero-btn button i {
     margin-right: 10px;
 }
 
@@ -305,7 +358,7 @@ button:hover {
 }
 
 .socials {
-    margin-left: 148px;
+    
     margin-top: 15px;
 
 }
@@ -319,6 +372,7 @@ button:hover {
 .socials ul {
     list-style-type: none;
     display: flex;
+    margin-left: 20%;
     gap: 35px;
 }
 
@@ -347,8 +401,8 @@ button:hover {
     position: relative;
     text-align: center;
     overflow: hidden;
-    margin: 10px;
 }
+
 .hidden {
     display: none;
 }
@@ -357,7 +411,8 @@ button:hover {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: rgba(231, 76, 60, 0.7); /* Red color with 70% opacity */
+    background-color: rgba(231, 76, 60, 0.7);
+    /* Red color with 70% opacity */
     color: white;
     font-size: 12px;
     font-weight: bold;
@@ -477,11 +532,6 @@ button:hover {
 }
 
 
-.btn-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-left: 6%;
-}
 
 /* ----- FOOTER BOX ----- */
 footer {
@@ -491,9 +541,9 @@ footer {
     align-items: center;
     flex-direction: column;
     row-gap: 30px;
-    -webkit-box-shadow: 0px -4px 5px 0px rgba(74,74,74,1);
-    -moz-box-shadow: 0px -4px 5px 0px rgba(74,74,74,1);
-    box-shadow: 0px -4px 5px 0px rgba(74,74,74,1);
+    -webkit-box-shadow: 0px -4px 5px 0px rgba(74, 74, 74, 1);
+    -moz-box-shadow: 0px -4px 5px 0px rgba(74, 74, 74, 1);
+    box-shadow: 0px -4px 5px 0px rgba(74, 74, 74, 1);
 }
 
 
@@ -540,75 +590,64 @@ footer {
         display: none;
     }
 
-    .user{
+    .user {
         display: flex;
         margin-top: 9px;
-        
     }
-    
-    .user p{
+
+    .user p {
         display: none;
         font-size: 16px;
         margin-top: 10px;
     }
-    .user img{
+
+    .user img {
         width: 50px;
         border: 2px solid #e74c3c;
         border-radius: 50px;
         height: 50px;
-        /* margin-right:10px ; */
-    
     }
 
     .navbar {
         display: flex;
-        /* align-items: center; */
         justify-content: space-between;
         width: 100%;
     }
 
-
     .search-bar {
-
         border: 2px solid #00afed;
         border-radius: 50px;
         display: flex;
         height: 35px;
-        margin-top: 16px;
-        width: 200px;
-
+        margin-top: 14px;
+        width: 160px;
+        /* Reduced width */
+        margin-left: 10px;
+        /* Added margin to move it slightly to the left */
     }
 
     .search-bar .input-box {
         height: 30px;
         border: none;
-        width: 130px;
-        border-radius: 48px 0px 0px 48px;
+        width: 100px;
+        /* Adjusted width */
+        border-radius: 48px 0 0 48px;
     }
 
     .search-bar .input-box:focus {
         outline: none;
     }
 
-
     .search-bar .search-btn {
         border: none;
-        width: 100px;
+        width: 60px;
+        /* Adjusted width */
         border-radius: 0 48px 48px 0;
-        font-size: 16px;
+        font-size: 14px;
+        /* Reduced font size */
         font-weight: 500;
         color: #e74c3c;
         cursor: pointer;
-
-    }
-
-    .search-bar input[placeholder] {
-        padding: 10px;
-    }
-
-    .search-bar .search-btn:hover {
-        background-color: #00afed;
-        color: #fff;
     }
 
     .menu-icon {
@@ -622,41 +661,21 @@ footer {
         border: none;
         color: #333;
         z-index: 10;
-        /* Ensures the menu icon is on top */
     }
 
-
-
-
-    .cart {
-        display: flex;
-        justify-content: end;
-        /* text-align: center; */
-        width: 100%;
-        margin-right: 10%;
-        margin-top: 16px;
-        position: relative;
-        /* Ensure it remains centered */
-    }
-
-    .cart a {
-        margin-right: 10px;
-    }
+   
 
     .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 70px;
-        /* Adjust based on header height */
         right: 20px;
         background-color: rgba(255, 255, 255, 0.9);
-        /* Translucent background */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         width: 200px;
         z-index: 1000;
-        /* Ensures the menu appears on top */
     }
 
     .nav-links.active {
@@ -673,194 +692,196 @@ footer {
     }
 
 
-
-    .carousel-indicators {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-    }
-
-    .hero-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-
-    .hero-text h2 {
-        font-size: 25px;
-        color: aqua;
-    }
-
-    .hero-text h1 {
-        font-size: 38px;
-        margin: 20px 0;
-    }
-
-    .hero-text p {
-        font-size: 16px;
-        margin-bottom: 30px;
-        font-weight: 500;
-    }
-
-    button {
-        padding: 15px 30px;
-        font-size: 16px;
-        color: #fff;
-        background-color: #ff5733;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .shop-icon {
-        margin-right: 10px;
-    }
-
-    button:hover {
-        background-color: #f9f9f9;
-        color: #e74c3c;
-    }
-
-    .socials {
-        margin-left: 14%;
-        margin-top: 15px;
-
-    }
-
-    .socials ul li i {
-        color: #f9f9f9;
-        font-size: 20px;
-
-    }
-
-    .socials ul {
-        list-style-type: none;
-        display: flex;
-        gap: 35px;
-    }
-
-    /* trending styling */
-
-    .trending {
-        top: 50px;
-        position: relative;
-        text-align: center;
-        overflow: hidden;
-        margin: 10px;
-    }
+}
 
 
-    .btn span {
-        cursor: pointer;
-        padding: 10px 20px;
-        transition: background-color 0.3s, color 0.3s;
-        /* Smooth transition for background and text color */
-    }
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
 
-    .btn span.active {
-        background-color: #e74c3c;
-        color: white;
-        border-radius: 5px;
-    }
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
-    .btn-section {
-        margin-top: 25px;
-    }
+.hero-text h2 {
+    font-size: 25px;
+    color: aqua;
+}
 
-    .item-container {
-        background: rgba(255, 255, 255, 0.3);
-        width: 210px;
-        position: relative;
-        margin: 10px;
-    }
+.hero-text h1 {
+    font-size: 38px;
+    margin: 20px 0;
+}
 
-    .item-container img {
-        border-radius: 3px;
-        margin-top: 2px;
-        height: 250px;
-        width: 100%;
-        /* Use 100% to make it responsive */
-        object-fit: cover;
-        /* Maintain aspect ratio and cover the area */
-    }
+.hero-text p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
 
-    .item-icons {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: rgba(255, 255, 255, 0.3);
-        border-radius: 5px;
-        padding: 5px;
-        display: none;
-        flex-direction: column;
-    }
+button {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff5733;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    .item-icons ul {
-        padding: 0;
-        margin: 0;
-    }
+.shop-icon {
+    margin-right: 10px;
+}
 
-    .item-icons ul li {
-        list-style-type: none;
-        margin-bottom: 8px;
-        text-align: center;
-    }
+button:hover {
+    background-color: #f9f9f9;
+    color: #e74c3c;
+}
 
-    .item-icons ul li i {
-        font-size: 18px;
-        margin-bottom: 10px;
-        color: #00afed;
-    }
-
-    .item-icons ul li i:hover {
-        color: #e74c3c;
-        /* Hover color */
-    }
-
-    .item-container p {
-        text-align: start;
-        /* Align text to the start */
-        margin-left: 3px;
-        /* Left margin */
-    }
-
-    .item-container .item-name {
-        font-size: 13px;
-        /* Item name font size */
-        font-weight: 400;
-        /* Item name font weight */
-    }
-
-    .item-container .item-rating::before {
-        content: "⭐⭐⭐⭐⭐";
-        /* Placeholder for rating */
-    }
-
-    .item-container .item-price {
-        font-size: 16px;
-        /* Price font size */
-        font-weight: 600;
-        /* Price font weight */
-    }
-
-    /* Optional: Show icons on hover */
-    .item-container:hover .item-icons {
-        display: flex;
-    }
-
-
-    .btn-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-left: 3%;
-    }
+.socials {
+    margin-left: 14%;
+    margin-top: 15px;
 
 }
+
+.socials ul li i {
+    color: #f9f9f9;
+    font-size: 20px;
+
+}
+
+.socials ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: 1%;
+    gap: 35px;
+}
+
+/* trending styling */
+
+.trending {
+    top: 50px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    margin: 10px;
+}
+
+
+.btn span {
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for background and text color */
+}
+
+.btn span.active {
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-section {
+    margin-top: 25px;
+}
+
+.item-container {
+    background: rgba(255, 255, 255, 0.3);
+    width: 210px;
+    position: relative;
+    margin: 10px;
+}
+
+.item-container img {
+    border-radius: 3px;
+    margin-top: 2px;
+    height: 250px;
+    width: 100%;
+    /* Use 100% to make it responsive */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the area */
+}
+
+.item-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 5px;
+    display: none;
+    flex-direction: column;
+}
+
+.item-icons ul {
+    padding: 0;
+    margin: 0;
+}
+
+.item-icons ul li {
+    list-style-type: none;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.item-icons ul li i {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #00afed;
+}
+
+.item-icons ul li i:hover {
+    color: #e74c3c;
+    /* Hover color */
+}
+
+.item-container p {
+    text-align: start;
+    /* Align text to the start */
+    margin-left: 3px;
+    /* Left margin */
+}
+
+.item-container .item-name {
+    font-size: 13px;
+    /* Item name font size */
+    font-weight: 400;
+    /* Item name font weight */
+}
+
+.item-container .item-rating::before {
+    content: "⭐⭐⭐⭐⭐";
+    /* Placeholder for rating */
+}
+
+.item-container .item-price {
+    font-size: 16px;
+    /* Price font size */
+    font-weight: 600;
+    /* Price font weight */
+}
+
+/* Optional: Show icons on hover */
+.item-container:hover .item-icons {
+    display: flex;
+}
+
+
+.btn-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 3%;
+}
+
 
 /* For medium screens (tablets) */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
@@ -879,7 +900,7 @@ footer {
         width: 100%;
     }
 
-    
+
 
     .search-bar {
 
@@ -936,22 +957,6 @@ footer {
         color: #333;
         z-index: 10;
         /* Ensures the menu icon is on top */
-    }
-
-
-    .cart {
-        display: flex;
-        justify-content:end;
-        /* text-align: center; */
-        width: 100%;
-        margin-right: 10%;
-        margin-top: 20px;
-        position: relative;
-        /* Ensure it remains centered */
-    }
-
-    .cart a {
-        margin-right: 10px;
     }
 
     .nav-links {
@@ -1052,6 +1057,7 @@ footer {
     .socials ul {
         list-style-type: none;
         display: flex;
+        text-align: center;
         gap: 35px;
     }
 
@@ -1199,7 +1205,7 @@ footer {
 
 /* About page styling */
 
-.who{
+.who {
     display: flex;
     margin-top: 20px;
     gap: 5px;
@@ -1211,77 +1217,80 @@ footer {
 
 } */
 
-.who .about-banner img{
+.who .about-banner img {
     width: 550px;
     height: 490px;
     border-radius: 23px;
     margin-top: 25px;
 }
 
-.who .content{
+.who .content {
     margin-top: 60px;
 }
 
-.who .content h1{
+.who .content h1 {
     font-size: 50px;
 }
 
-.who .content p{
+.who .content p {
     color: #6c6c6c;
 }
 
-.proud-off{
+.proud-off {
     margin-top: 40px;
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
     gap: 15%;
     text-align: center;
 }
 
-.proud-off .number{
+.proud-off .number {
     font-size: 16px;
     font-weight: bold;
 }
 
-.proud-off .content{
+.proud-off .content {
     color: #6c6c6c;
-    
+
 }
 
-.values-container{
+.values-container {
     margin-top: 45px;
 }
-.values-container h2{
+
+.values-container h2 {
     text-align: center;
     font-size: 40px;
 }
 
-.values{
+.values {
     display: flex;
     gap: 10px;
 }
 
-.value-item i{
+.value-item i {
     color: #00afed;
     font-size: 50px;
 }
 
-.value-item .value-icon{
+.value-item .value-icon {
     text-align: center;
 }
 
-.value-content{
+.value-content {
     text-align: center;
 }
 
-.value-content .title{
+.value-content .title {
     font-size: 20px;
     font-weight: 700;
     color: #333;
     margin-bottom: 10px;
 }
 
-.value-content p{
+.value-content p {
     color: #6c6c6c;
 }

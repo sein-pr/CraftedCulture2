@@ -16,12 +16,12 @@
         <img src="assets/img/logo-short.png" alt="logo-img" class=" logo short">
         <nav class="navbar">
             <div class="menu-icon" onclick="toggleMenu()">
-                <i class="fa-solid fa-bars"></i>
+                <i class="uil uil-bars"></i>
             </div>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active-link">Home</a></li>
                 <li><a href="#">Shop</a></li>
-                <li><a href="#">Pages</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contacts</a></li>
             </ul>
@@ -34,10 +34,6 @@
                 <p>Victoria Kulula</p>
             </div>
         </nav>
-        <div class="cart">
-            <a href="#cart"><i <i class="uil uil-shopping-bag"></i></a>
-            <span>0.00</span>
-        </div>
     </header>
     <main>
         <section class="hero">
@@ -90,6 +86,21 @@
         </section>
         
     </main>
+
+
+    <!-- Floating Cart Icon and Modal -->
+    <div class="floating-cart" onclick="toggleCartModal()">
+        <i class="uil uil-shopping-bag"></i>
+        <span class="cart-count">0</span>
+    </div>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="modal-content">
+            <h2>Your Cart</h2>
+            <p>No items in cart.</p>
+            <button onclick="closeCartModal()">Close</button>
+        </div>
+    </div>
 
     <!-- --------------- FOOTER --------------- -->
     <footer>
